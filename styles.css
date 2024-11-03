@@ -1,0 +1,281 @@
+/* General styles */
+body {
+    display: flex;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+  }
+  
+  /* Sidebar styles */
+  #sidebar {
+    width: 250px;
+    background-color: #333;
+    color: #fff;
+    position: fixed;
+    left: -250px;
+    height: 100vh;
+    overflow: hidden;
+    transition: 0.3s;
+  }
+  
+  #sidebar nav ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  #sidebar nav ul li {
+    padding: 15px;
+    text-align: center;
+  }
+  
+  #sidebar nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .open-btn {
+    background: none;
+    color: #fff;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  .open-btn {
+    position: absolute;
+    left: 15px;
+    top: 20px;
+  }
+  
+  /* Main content styles */
+  #main-content {
+    margin-left: 0;
+    transition: 0.3s;
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  header h1 {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    font-size: 25px;
+  }
+  
+  /* Section styles */
+  section h1 {
+    font-size: 50px;
+    margin-top: 5%;
+  }
+  
+  section p {
+    font-size: 30px;
+    margin-top: 3%;
+  }
+  
+  .upload-btn {
+    padding: 10px 20px;
+    margin: 10px 0;
+    font-size: 25px;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .upload-btn:hover {
+    background-color: #ddd;
+  }
+  
+  /* Options container */
+  .options-container {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+  }
+  
+  .option-group p {
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  
+  .option-group label {
+    display: block;
+    font-size: 25px;
+    margin: 5px 0;
+  }
+  
+  /* Start button */
+  .start-btn {
+    padding: 30px 50px;
+    font-size: 35px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  .start-btn:hover {
+    background-color: #45a049;
+  }
+  
+  /* Styling for Rice Plant 101 page */
+.main-content {
+  padding: 20px;
+  color: #ffffff;
+}
+
+.page-title {
+  text-align: center;
+  color: #ffffff;
+  font-size: 50px;
+  margin: 4%;
+}
+
+.accordion-container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.accordion {
+  border: 1px solid #888;
+  border-radius: 5px;
+  margin-bottom: 30px;
+  background-color: #333;
+}
+
+.accordion-header {
+  background-color: #444;
+  color: #fff;
+  cursor: pointer;
+  padding: 15px;
+  text-align: left;
+  border: none;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.1em;
+}
+
+.accordion-content {
+  padding: 15px;
+  display: none; /* Hidden by default */
+  color: #ddd;
+  background-color: #222;
+}
+
+.accordion-content p {
+  margin: 0;
+}
+
+.arrow {
+  transition: transform 0.3s;
+}
+
+.accordion.open .arrow {
+  transform: rotate(180deg); /* Rotate arrow when open */
+}
+
+/* Styling for About page */
+.about-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  color: #ffffff;
+}
+
+.about-box {
+  background-color: #444;
+  color: #333333;
+  width: 95%;
+  max-width: 95%;
+  margin: 10px 0;
+  padding: 14spx;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.about-box h2 {
+  font-size: 1.6em;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.about-box p {
+  font-size: 1.2em;
+  line-height: 1.6;
+  color: white;
+}
+
+/* Container untuk visualisasi */
+.visualization-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.visualization {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 20px;
+}
+
+.visualization img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.center-text {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 20px;
+  color: #fff;
+}
+
+.center-btn {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Tombol Excel */
+.excel-btn {
+  padding: 10px 20px;
+  font-size: 20px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.excel-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Flash container */
+.flash-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.flash-container ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.flash-container li {
+  display: inline;
+  color: #00ff00;  /* Warna hijau untuk flash message */
+  font-weight: bold;
+}

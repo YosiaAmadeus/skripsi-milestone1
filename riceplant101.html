@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website Clustering Produktivitas Padi</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <div id="sidebar">
+    <nav>
+      <ul>
+        <li><a href="{{ url_for('home') }}">Home</a></li>
+        <li><a href="{{ url_for('riceplant101') }}">Rice Plant 101</a></li>
+        <li><a href="{{ url_for('about') }}">About</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <div id="main-content">
+    <header>
+      <h1>535210037</h1>
+      <button class="open-btn" onclick="toggleSidebar()">&#9776;</button>
+    </header>
+
+ <!-- Main Content Area -->
+ <div class="main-content">
+    <h1 class="page-title">Seputar Mengenai Produktivitas Padi</h1>
+
+    <div class="accordion-container">
+        <!-- Accordion 1 -->
+        <div class="accordion">
+            <button class="accordion-header">
+                <span>Apa yang dimaksud dengan produktivitas padi?</span>
+                <span class="arrow">▼</span>
+            </button>
+            <div class="accordion-content">
+                <p>Produktivitas padi adalah ukuran seberapa banyak gabah kering giling (GKG) yang bisa dihasilkan dari satu hektar lahan dalam satu musim tanam. Sederhananya, ini adalah jumlah panen yang kita dapatkan dari lahan yang kita tanam padi.
+
+                    Misalnya: Jika seorang petani menanam padi di lahan seluas 1 hektar dan pada akhir panen ia mendapatkan 5 ton gabah kering giling, maka produktivitas padinya adalah 5 ton/hektar.</p>
+            </div>
+        </div>
+
+        <!-- Add more accordions similarly -->
+        <div class="accordion">
+            <button class="accordion-header">
+                <span> Apa itu luas panen padi dan produksi padi?</span>
+                <span class="arrow">▼</span>
+            </button>
+            <div class="accordion-content">
+                <p>Luas panen padi adalah total area lahan sawah yang telah digunakan untuk menanam padi dan telah berhasil dipanen dalam periode waktu tertentu. Ini seperti menghitung berapa banyak sawah yang telah digunakan untuk menghasilkan padi. Angka ini penting untuk mengetahui seberapa banyak lahan yang sudah berkontribusi dalam produksi padi.
+
+                    Produksi padi adalah jumlah total padi yang berhasil dihasilkan dari seluruh lahan yang dipanen. Ini merupakan hasil akhir dari proses penanaman padi, yaitu berapa banyak padi yang berhasil kita panen. Produksi padi biasanya dinyatakan dalam satuan ton atau kuintal. Jadi, jika luas panen adalah luas lahannya, maka produksi adalah hasil atau output dari lahan tersebut.</p>
+            </div>
+        </div>
+
+                <!-- Add more accordions similarly -->
+                <div class="accordion">
+                    <button class="accordion-header">
+                        <span>Provinsi mana di Indonesia yang memiliki produksi padi terbesar?</span>
+                        <span class="arrow">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Jawa Timur, Jawa Barat, dan Jawa Tengah secara konsisten menjadi tiga besar provinsi penghasil padi terbesar di Indonesia. Namun, data produksi padi dapat berubah setiap tahunnya tergantung pada kondisi alam dan faktor-faktor lainnya. </p>
+                    </div>
+                </div>
+        
+        <!-- Accordion 2 -->
+        <div class="accordion">
+            <button class="accordion-header">
+                <span>Faktor apa saja yang mempengaruhi produktivitas padi?</span>
+                <span class="arrow">▼</span>
+            </button>
+            <div class="accordion-content">
+                <p>Produktivitas padi dipengaruhi oleh berbagai faktor kompleks, baik yang bersifat alami maupun buatan manusia. Faktor alami meliputi kondisi tanah, iklim (curah hujan, suhu, sinar matahari), serta keberadaan hama dan penyakit tanaman. Faktor buatan manusia mencakup varietas padi yang ditanam, teknik budidaya (pengolahan tanah, penanaman, pemupukan, pengairan, pengendalian hama dan penyakit), serta ketersediaan sarana dan prasarana pertanian. Selain itu, faktor sosial ekonomi seperti akses terhadap informasi, teknologi, dan pasar juga turut berperan. Interaksi antara faktor-faktor ini akan menentukan tinggi rendahnya hasil panen padi.</p>
+            </div>
+        </div>
+
+                <!-- Add more accordions similarly -->
+                <div class="accordion">
+                    <button class="accordion-header">
+                        <span> Apa upaya pemerintah untuk meningkatkan produksi padi?</span>
+                        <span class="arrow">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Pemerintah Indonesia telah melakukan berbagai upaya untuk meningkatkan produksi padi, seperti penyediaan benih unggul, pupuk bersubsidi, serta program-program intensifikasi pertanian. Selain itu, pemerintah juga berupaya memperbaiki infrastruktur pertanian, mengembangkan sistem irigasi, dan memberikan penyuluhan kepada petani.</p>
+                    </div>
+                </div>
+
+                        <!-- Add more accordions similarly -->
+        <div class="accordion">
+            <button class="accordion-header">
+                <span> Apa dampak dari gagal panen padi terhadap perekonomian Indonesia?</span>
+                <span class="arrow">▼</span>
+            </button>
+            <div class="accordion-content">
+                <p>Sebagai negara agraris dengan mayoritas penduduknya mengkonsumsi beras sebagai makanan pokok, gagal panen padi dapat memicu berbagai masalah ekonomi. Pertama, inflasi akan meningkat karena harga beras sebagai komoditas utama akan meroket. Kenaikan harga beras akan berdampak pada kenaikan harga barang dan jasa lainnya, sehingga daya beli masyarakat akan menurun. Kedua, kemiskinan dapat meningkat, terutama di daerah pedesaan yang sangat bergantung pada sektor pertanian. Gagal panen akan mengurangi pendapatan petani dan berdampak pada perekonomian lokal. Ketiga, neraca pembayaran dapat tertekan jika Indonesia harus melakukan impor beras dalam jumlah besar untuk memenuhi kebutuhan domestik. Impor yang tinggi akan mengurangi devisa negara dan memperlemah nilai tukar rupiah. Terakhir, pertumbuhan ekonomi secara keseluruhan dapat melambat karena sektor pertanian merupakan salah satu penggerak utama perekonomian Indonesia. Gagal panen akan mengurangi produksi pertanian dan berdampak pada sektor-sektor lain yang terkait, seperti industri pengolahan makanan dan minuman.</p>
+            </div>
+        </div>
+
+                <!-- Add more accordions similarly -->
+                <div class="accordion">
+                    <button class="accordion-header">
+                        <span>Darimana sumber terpercaya untuk mendapatkan data pertanian nasional dan daerah di Indonesia?</span>
+                        <span class="arrow">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Untuk mendapatkan data pertanian Indonesia, Anda dapat mendapatkan informasi terbaru dari sumber terpercaya seperti Badan Pusat Statistik (BPS) nasional atau daerah setempat dan Kementerian Pertanian Republik Indonesia.</p>
+                    </div>
+                </div>
+
+        <!-- Repeat for additional topics as needed -->
+    </div>
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

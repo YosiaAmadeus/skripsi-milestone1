@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website Clustering Produktivitas Padi</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <div id="sidebar">
+    <nav>
+      <ul>
+        <li><a href="{{ url_for('home') }}">Home</a></li>
+        <li><a href="{{ url_for('riceplant101') }}">Rice Plant 101</a></li>
+        <li><a href="{{ url_for('about') }}">About</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <div id="main-content">
+    <header>
+      <h1>535210037</h1>
+      <button class="open-btn" onclick="toggleSidebar()">&#9776;</button>
+    </header>
+
+  <div class="main-content about-content">
+    <h1 class="page-title">Seputar Mengenai Profil dan Tugas Akhir Mahasiswa</h1>
+    <div class="about-box">
+        <h2>Profil Mahasiswa</h2>
+        <p>Yosia Amadeus Ishak (NIM 535210037), adalah seorang mahasiswa Universitas Tarumanagara, Fakultas Teknologi Informasi, Jurusan Teknik Informatika, Angkatan 2021. <br> Saat ini, sedang menjalani semester 7 dan mengemban kewajiban menyelesaikan tugas akhir berupa Skripsi Penelitian dengan judul <br> "Perbandingan Metode K-Means Clustering dan Fuzzy C-Means untuk Pemetaan Wilayah di Indonesia Berdasarkan Produktivitas Panen Padi". </p>
+    </div>
+
+    <div class="about-box">
+        <h2>Alasan dan Tujuan Pembuatan Website</h2>
+        <p>Website ini dibuat dalam rangka untuk penyelesaian tugas akhir berupa skripsi penelitian yang sedang dijalani oleh mahasiswa. Website ini diharapkan dapat membantu melakukan clustering terhadap data padi yang dimiliki oleh pengguna lain, dan juga membantu pemerintah dalam merumuskan kebijakan mengenai pemerataan produktivitas dan distribusi padi di Indonesia</p>
+    </div>
+
+    <div class="about-box">
+        <h2>Fitur Website</h2>
+        <p>Pada website ini, pengguna dapat mengunggah dataset padi dengan mengikuti template yang telah disediakan dalam format excel (.xlsx). Kemudian pengguna dapat memilih jumlah cluster antara 2 hingga 3 cluster dan memilih algoritma K-Means Clustering atau Fuzzy C-Means. Hasil clustering berupa tabel dan visualisasi scatter plot akan terlihat pada halaman "Clustering".
+        Selain itu, pengguna juga dapat membaca informasi umum mengenai padi dan kondisi padi di Indonesia pada halaman "Rice Plant 101". Hal ini diharapkan dapat memberikan edukasi singkat mengenai padi dan kondisi pangan padi di Indonesia.</p>
+    </div>
+</div>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

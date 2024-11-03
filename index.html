@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website Clustering Produktivitas Padi</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <div id="sidebar">
+    <nav>
+      <ul>
+        <li><a href="{{ url_for('home') }}">Home</a></li>
+        <li><a href="{{ url_for('riceplant101') }}">Rice Plant 101</a></li>
+        <li><a href="{{ url_for('about') }}">About</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <div id="main-content">
+    <header>
+      <h1>535210037</h1>
+      <button class="open-btn" onclick="toggleSidebar()">&#9776;</button>
+    </header>
+
+    <section class="content">
+      <h1>Website Clustering Produktivitas Padi</h1>
+      <p>Silahkan upload data anda</p>
+
+      <!-- Mulai Formulir -->
+      <form id="clusteringForm" action="/run-clustering" method="post" enctype="multipart/form-data">
+        
+        <!-- Input File untuk Upload Dataset -->
+        <input type="file" name="dataset" accept=".xlsx" required><br><br>
+        <p><a href="template.xlsx" download>Download contoh template (.xlsx)</a></p>
+        <p><a href="keterangan.xlsx" download>Lihat petunjuk upload  (.xlsx)</a></p>
+
+        <!-- Pilihan Jumlah Cluster -->
+        <div class="options-container">
+          <div class="option-group">
+            <p>Jumlah Cluster</p>
+            <label><input type="radio" name="clusters" value="2" required> 2</label>
+            <label><input type="radio" name="clusters" value="3"> 3</label>
+          </div>
+
+          <!-- Pilihan Model Algoritma -->
+          <div class="option-group">
+            <p>Model Algoritma</p>
+            <label><input type="radio" name="algorithm" value="kmeans" required> K-Means Clustering</label>
+            <label><input type="radio" name="algorithm" value="fuzzy"> Fuzzy C-Means</label>
+          </div>
+        </div>
+
+        <!-- Tombol Mulai -->
+        <button type="submit" class="start-btn">Mulai</button>
+      </form>
+      <!-- Akhir Formulir -->
+
+      <!-- Tampilkan Hasil Clustering -->
+      {% if result %}
+      <h2>Hasil Clustering:</h2>
+      <div class="visualization-container">
+        <div class="visualization">
+          <img src="{{ url_for('static', filename='distribution.png') }}" alt="Distribusi Cluster">
+          <p class="center-text">Clustering completed successfully</p>
+        </div>
+        <div class="visualization">
+          <img src="{{ url_for('static', filename='map.png') }}" alt="Peta Hasil Clustering">
+        </div>
+      </div>
+      <div class="center-btn">
+        <button onclick="downloadExcel()" class="excel-btn">Save to Excel</button>
+      </div>
+      {% endif %}
+
+      <!-- Tampilkan Pesan Flash -->
+      <div class="flash-container">
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <ul>
+          {% for message in messages %}
+          <li>{{ message }}</li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+        {% endwith %}
+      </div>
+      
+    </section>
+  </div>
+
+  <script>
+  function downloadExcel() {
+      window.location.href = "/download-excel";
+  }
+  </script>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
